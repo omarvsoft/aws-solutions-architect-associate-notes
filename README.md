@@ -307,9 +307,9 @@ For __static website hosting__ with S3, the name of the bucket must be the same 
 
 __Storage Clasess__
 
-|Name|Designed for|Durability (designed for)|Availability (designed for)|Availability Zones|Min storage duration|Min billable object size|Other considerations|
-|---|---|---|---|---|---|---|
-|S3 Standard|Frequently accessed data|99.999999999%|99.99%|>=3|None|None|None|
+Name|Designed for|Durability (designed for)|Availability (designed for)|Availability Zones|Min storage duration|Min billable object size|Other considerations
+---|---|---|---|---|---|---|
+S3 Standard|Frequently accessed data|99.999999999%|99.99%|>=3|None|None|None
 
 __Preventing accidental deletion__ of S3 objects —
 

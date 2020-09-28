@@ -244,10 +244,9 @@ When you enable logging on a bucket, the console both enables logging on the sou
 __S3 bucket endpoints formats__ —
 1. http://bucket.s3.amazonaws.com
 2. http://bucket.s3.aws-region.amazonaws.com
-3. http://bucket.s3-aws-region.amazonaws.com
-4. http://s3.amazonaws.com/bucket
-5. http://s3.aws-region.amazonaws.com/bucket
-6. http://s3-aws-region.amazonaws.com/bucket
+3. http://s3.amazonaws.com/bucket
+4. http://s3.aws-region.amazonaws.com/bucket
+5. http://s3-aws-region.amazonaws.com/bucket
 
 __Update__ — AWS will stop supporting the URL path format for buckets created after September 30, 2020. Read [this](https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/) for details.
 
@@ -314,6 +313,7 @@ __Storage Clasess__
 | S3 Intelligent-Tiering | Long-lived data with changing or unknown access patterns | 99.999999999% | 99.99% | >=3 | 30 days | None | Monitoring and automation fees per object apply. No retrieval fees. |
 | S3 One Zone-IA | Long-lived, infrequently accessed, non-critical data | 99.999999999% | 99.99% | 1 | 30 days | 128 KB | Per GB retrieval fees apply. Not resilient to the loss of the Availability Zone. |
 | S3 Glacier | Long-term data archiving with retrieval times ranging from minutes to hours | 99.999999999% | 99.99% (after you restore objects) | >=3 | 90 days | 40 KB | Per GB retrieval fees apply. Not resilient to the loss of the Availability Zone. | Per GB retrieval fees apply. You must first restore archived objects before you can access them. |
+| S3 Glacier Deep Archive | Archiving rarely accessed data with a default retrieval time of 12 hours | 99.999999999% | 99.99% (after you restore objects) | >=3 | 180 days | 40 KB | Per GB retrieval fees apply. Not resilient to the loss of the Availability Zone. | Per GB retrieval fees apply. You must first restore archived objects before you can access them. |
 
 __Preventing accidental deletion__ of S3 objects —
 
@@ -588,6 +588,11 @@ We can use __dead letter queues__ to isolate messages that can't be processed ri
 SQS does not __encrypt__ messages by default.
 
 Default __visibility timeout__ for SQS is __30 seconds__.
+
+__Standard queues__ provide at-least-once delivery, which means that each message is delivered at least once.
+
+__FIFO queues__ provide exactly-once processing, which means that each message is delivered once and remains available until a consumer processes it and deletes it. Duplicates are not introduced into the queue.
+
 
 Each __FIFO Queue__ uses —
 - Message Deduplication ID 

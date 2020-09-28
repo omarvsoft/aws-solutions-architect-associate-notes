@@ -166,6 +166,9 @@ __Main functions of Route53__ —
 
 It's not used to _distribute_ traffic.
 
+__Record:__ An A record (Address Record) points a domain or subdomain to an IP address. For example, store.website.com or blog.website.com and point it to where you have your store.
+__CNAME:__ A CNAME (Canonical Name) points one domain or subdomain to another domain name, allowing you to update one A Record each time you make a change, regardless of how many Host Records need to resolve to that IP address. 
+
 __CNAME vs ALIAS__ —  
 
 - For routing to S3 bucket // Elastic load balancer use A record with ALIAS.  
@@ -192,7 +195,7 @@ __Multivalue answer routing policy__ responds with upto 8 healthy records select
 
 __Weighted routing policy__ is a good fit for __blue-green deployments__.
 
-# DNS Routing policies
+__DNS Routing policies__
 
 __Simple routing policy –__ Use for a single resource that performs a given function for your domain, for example, a web server that serves content for the example.com website.
 

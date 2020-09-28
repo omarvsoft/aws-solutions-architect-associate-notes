@@ -242,11 +242,24 @@ User defined metadatas must start with `x-amz-meta`.
 When you enable logging on a bucket, the console both enables logging on the source bucket and adds a grant in the target bucket's access control list (ACL) granting write permission to the Log Delivery Group.
 
 __S3 bucket endpoints formats__ —
-1. http://bucket.s3.amazonaws.com
-2. http://bucket.s3.aws-region.amazonaws.com
-3. http://s3.amazonaws.com/bucket
-4. http://s3.aws-region.amazonaws.com/bucket
-5. http://s3-aws-region.amazonaws.com/bucket
+
+__Virtual hosted style access__
+
+- In virtual-hosted style URL the bucket name becomes a subdomain:
+
+https://__bucket-name__.s3.amazonaws.com/__key name__
+https://__bucket-name__.s3.__Region__.amazonaws.com/__key name__
+
+
+__Path-style access__
+
+https://s3.amazonaws.com/__bucket-name__/__key name__
+https://s3.__Region__.amazonaws.com/__bucket-name__/__key name__
+https://s3-__Region__.amazonaws.com/__bucket-name__/__key name__
+
+
+
+
 
 __Update__ — AWS will stop supporting the URL path format for buckets created after September 30, 2020. Read [this](https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/) for details.
 

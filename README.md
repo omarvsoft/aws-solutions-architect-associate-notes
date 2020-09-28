@@ -192,6 +192,21 @@ __Multivalue answer routing policy__ responds with upto 8 healthy records select
 
 __Weighted routing policy__ is a good fit for __blue-green deployments__.
 
+# DNS Routing policies
+
+__Simple routing policy –__ Use for a single resource that performs a given function for your domain, for example, a web server that serves content for the example.com website.
+
+__Failover routing policy –__ Use when you want to configure active-passive failover.
+
+__Geolocation routing policy –__ Use when you want to route traffic based on the location of your users.
+
+__Geoproximity routing policy –__ Use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another.
+
+__Latency routing policy –__ Use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency.
+
+__Multivalue answer routing policy –__ Use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random.
+
+__Weighted routing policy –__ Use to route traffic to multiple resources in proportions that you specify.
 
 
 # S3

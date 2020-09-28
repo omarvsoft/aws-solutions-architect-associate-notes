@@ -254,11 +254,12 @@ https://__bucket-name__.s3.__Region__.amazonaws.com/__key name__
 
 __Path-style access__
 
-https://s3.amazonaws.com/__bucket-name__/__key name__
 
-https://s3.__Region__.amazonaws.com/__bucket-name__/__key name__
+http://s3.amazonaws.com/__bucket-name__/__key name__
 
-https://s3-__Region__.amazonaws.com/__bucket-name__/__key name__
+http://s3.__Region__.amazonaws.com/__bucket-name__/__key name__
+
+http://s3-__Region__.amazonaws.com/__bucket-name__/__key name__
 
 
 

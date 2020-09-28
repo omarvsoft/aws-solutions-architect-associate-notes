@@ -307,9 +307,11 @@ For __static website hosting__ with S3, the name of the bucket must be the same 
 
 __Storage Clasess__
 
-Name|Designed for|Durability (designed for)|Availability (designed for)|Availability Zones|Min storage duration|Min billable object size|Other considerations
----|---|---|---|---|---|---|
-S3 Standard|Frequently accessed data|99.999999999%|99.99%|>=3|None|None|None
+| Name | Designed for | Durability (designed for) | Availability (designed for) | Availability Zones | Min storage duration | Min billable object size | Other considerations |
+| --- | --- | --- | --- | --- | --- | --- | -- |
+| S3 Standard | Frequently accessed data | 99.999999999% | 99.99% | >=3 | None | None | None |
+| S3 Standard-IA | Long-lived, infrequently accessed data | 99.999999999% | 99.99% | >=3 | 30 days | 128 KB | Per GB retrieval fees apply. |
+| S3 Intelligent-Tiering | Long-lived data with changing or unknown access patterns | 99.999999999% | 99.99% | >=3 | 30 days | None | Monitoring and automation fees per object apply. No retrieval fees. |
 
 __Preventing accidental deletion__ of S3 objects —
 

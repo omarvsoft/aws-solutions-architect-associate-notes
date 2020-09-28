@@ -248,13 +248,16 @@ __Virtual hosted style access__
 - In virtual-hosted style URL the bucket name becomes a subdomain:
 
 https://__bucket-name__.s3.amazonaws.com/__key name__
+
 https://__bucket-name__.s3.__Region__.amazonaws.com/__key name__
 
 
 __Path-style access__
 
 https://s3.amazonaws.com/__bucket-name__/__key name__
+
 https://s3.__Region__.amazonaws.com/__bucket-name__/__key name__
+
 https://s3-__Region__.amazonaws.com/__bucket-name__/__key name__
 
 
